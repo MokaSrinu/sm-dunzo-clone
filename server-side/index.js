@@ -3,6 +3,7 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const InitiateMongoServer = require('./config/db');
 const userRouter = require('./routes/user');
+const landingPageRouter = require('./routes/landingPage');
 const { API_ENDPOINT_NOT_FOUND_ERR, SERVER_ERR } = require('./errors');
 
 //Configuring dotenv
@@ -22,6 +23,7 @@ app.use(setReqContext);
 app.use(logger);
 
 app.use(userRouter);
+app.use(landingPageRouter);
 
 
 function logger(req, res, next) {
