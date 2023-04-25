@@ -24,7 +24,7 @@ const configLandingPagePost = async (req, res, next) => {
             message: error.message
         })
     }
-    finally{
+    finally {
         next();
     }
 };
@@ -32,19 +32,30 @@ const configLandingPagePost = async (req, res, next) => {
 const getLandingPageByCity = async (req, res, next) => {
     const { city } = req.query;
     try {
-        const cityLandingPage = await LandingPage.findOne({city: `${city}`});
-        return res.status(201).json({
-            success: true,
-            message: `Successfully found ${city}`,
-            data: cityLandingPage
-        });
+        const cityRegex = new RegExp('^' + `${city}` + '$', 'i');;
+        const cityLandingPage = await LandingPage.findOne({ city: cityRegex });
+        if (cityLandingPage) {
+            return res.status(201).json({
+                success: true,
+                message: `Successfully found ${city}`,
+                data: cityLandingPage
+            });
+        } else {
+            return res.status(404).json({
+                success: false,
+                message: 'data not found',
+                data: cityLandingPage
+            })
+        }
+
+
     } catch (error) {
         return res.status(412).send({
             success: false,
             message: error.message
         })
     }
-    finally{
+    finally {
         next();
     }
 }
