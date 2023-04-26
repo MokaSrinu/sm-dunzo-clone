@@ -10,7 +10,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/i,
+        test: /\.(js|jsx|json)$/i,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
@@ -23,9 +23,6 @@ module.exports = {
       {
         test: /\.(docx|xlsx|doc|pdf|ppt|xls|txt)$/i,
         loader: 'file-loader',
-        // options: {
-        //   name: '[path][name].[ext]',
-        // },
       },
     ],
   },
