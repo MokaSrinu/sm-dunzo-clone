@@ -1,0 +1,91 @@
+.TopNavbar__Container {
+  height: 72px;
+  position: fixed;
+  left: 0px;
+  width: 100%;
+  max-width: 100vw;
+  background-color: rgb(255, 255, 255);
+  top: 0px;
+  z-index: 11;
+  .TopNavbarContent {
+    max-width: 1024px;
+    width: 100%;
+    padding: 1.5rem 0;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    margin: 0 auto;
+    border: 1px solid red;
+    .LeftWrap {
+      display: flex;
+      flex: 1 1 0%;
+      gap: 2.5rem;
+      align-items: center;
+      .LocationWrap {
+        display: flex;
+        gap: 0.2rem;
+        font-size: 14px;
+        font-weight: 600;
+        justify-content: center;
+        align-items: center;
+        color: var(--neutral-primary);
+        cursor: pointer;
+        svg {
+          font-size: 1.2rem;
+          color: var(--success-primary);
+        }
+      }
+    }
+    .MiddleWrap {
+      display: flex;
+      gap: 1.5rem;
+
+      .BusinessButton {
+        cursor: pointer;
+        background: none;
+        border: medium none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.2rem;
+        color: var(--neutral-primary);
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.2px;
+        svg {
+          font-size: 1.2rem;
+        }
+        &:hover {
+          color: var(--success-primary);
+        }
+      }
+    }
+    .RightWrap {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      .SearchItem {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+        text-align: center;
+        margin-top: 4px;
+        svg {
+          font-size: 2rem;
+        }
+        .SignInButton{
+          cursor: pointer;
+          font-size: 14px;
+          color: rgb(255, 255, 255);
+          background: rgb(0, 210, 144);
+          padding: 8px 20px;
+          border-radius: 30px;
+          font-weight: bold;
+          border: none;
+        }
+      }
+    }
+  }
+}
