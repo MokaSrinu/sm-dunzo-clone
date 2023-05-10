@@ -1,21 +1,22 @@
 .TopNavbar__Container {
-  height: 72px;
-  position: fixed;
+  //height: 72px;
+  position: sticky;
   left: 0px;
   width: 100%;
   max-width: 100vw;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 12px;
   background-color: rgb(255, 255, 255);
   top: 0px;
-  z-index: 11;
+  //z-index: 11;
   .TopNavbarContent {
     max-width: 1024px;
     width: 100%;
-    padding: 1.5rem 0;
+    padding: 0.8rem 0;
     display: flex;
     gap: 2rem;
     justify-content: space-between;
+    align-items: center;
     margin: 0 auto;
-    border: 1px solid red;
     .LeftWrap {
       display: flex;
       flex: 1 1 0%;
@@ -57,25 +58,60 @@
           font-size: 1.2rem;
         }
         &:hover {
-          color: var(--success-primary);
+          color: rgb(0, 210, 144);;
         }
       }
     }
     .RightWrap {
       display: flex;
-      gap: 1rem;
+      gap: 1.5rem;
       align-items: center;
-      .SearchItem {
+      justify-content: center;
+      .SearchIcon {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+        text-align: center;
+        svg {
+          margin: 0 auto;
+          font-weight: none;
+          height: 24px;
+          width: 28px;
+        }
+        &:hover {
+          color: rgb(0, 179, 122);
+          svg {
+            color: rgb(0, 179, 122);
+            stroke: rgb(0, 179, 122);
+          }
+        }
+      }
+      .CartIcon{
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+        text-align: center;
+        svg {
+          margin: 0 auto;
+          font-weight: none;
+          height: 24px;
+          width: 28px;
+        }
+        &:hover {
+          color: rgb(0, 179, 122);
+          svg {
+            color: rgb(0, 179, 122);
+            fill: rgb(0, 179, 122);
+          }
+        }
+      }
+      .SignInButtonWrap {
         font-style: normal;
         font-weight: 600;
         font-size: 12px;
         line-height: 16px;
         text-align: center;
-        margin-top: 4px;
-        svg {
-          font-size: 2rem;
-        }
-        .SignInButton{
+        .SignInButton {
           cursor: pointer;
           font-size: 14px;
           color: rgb(255, 255, 255);
@@ -85,6 +121,35 @@
           font-weight: bold;
           border: none;
         }
+      }
+    }
+  }
+}
+.NavbarBottom__Container{
+  width: 100%;
+  height: 44px;
+  background: linear-gradient(90.05deg, rgb(9, 17, 37) -2.5%, rgb(33, 61, 133) 100.83%);
+  .NavbarBottomContent{
+    max-width: 1024px;
+    width: 100%;
+    height:100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .LeftWrap{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .PanItemsImage{
+        width:1.5rem;
+        height:1.5rem;
+        border-radius: 50%;
+        padding:0px;
+        background-color: rgba(255, 255, 255, 0.24);
+      }
+      img{
+        position: absolute;
       }
     }
   }
