@@ -1,9 +1,9 @@
 const LandingPage = require('../models/landingPage');
 
 const configLandingPagePost = async (req, res, next) => {
-    const { bread_crums, city, description, color_cards, plain_cards, areas_we_deliver, special_banner } = req.body;
+    const { bread_crum, city, description, color_cards, plain_cards, areas_we_deliver, special_banner } = req.body;
     const newLandingPage = {
-        bread_crums,
+        bread_crum,
         city,
         description,
         color_cards,
