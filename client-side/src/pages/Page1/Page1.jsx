@@ -1,7 +1,10 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { landingPageDetailsGet } from '../../api-client';
+import { PageFooter } from '../../components/molecules';
+import classes from './Page1.module.scss';
 
 const Page1 = () => {
+  const [landingPageData, setLandingPageData] = useState(null);
   const synchronizeComponentData = async () => {
     try {
       const payload = {
@@ -9,6 +12,7 @@ const Page1 = () => {
       }
       const landingPageDetailsGetRes = await landingPageDetailsGet(payload);
       console.log('landingPageDetailsGetRes', landingPageDetailsGetRes);
+      setLandingPageData(landingPageDetailsGetRes?.data?.data);
     } catch (error) {
       console.error('landingPageDetailsGetRes error', error);
     }
@@ -17,7 +21,9 @@ const Page1 = () => {
     synchronizeComponentData();
   }, []);
   return (
-    <div>Page1</div>
+    <div className={classes.Page1}>Page1
+      <PageFooter areasWeDeliver={landingPageData?.areas_we_deliver}/>
+    </div>
   )
 }
 

@@ -1,12 +1,16 @@
 import React from "react";
-import { MdKeyboardArrowDown, MdLocationOn } from "react-icons/md";
-import classes from "./TopNavbar.module.scss";
+import {
+  MdKeyboardArrowDown,
+  MdKeyboardArrowRight,
+  MdLocationOn,
+} from "react-icons/md";
 import { CartIcon, SearchIcon } from "../../atoms/Icons/Icons.jsx";
+import classes from "./TopNavbar.module.scss";
 
 const TopNavbar = () => {
   return (
-    <div>
-      <div className={classes.TopNavbar__Container}>
+    <>
+      <section className={classes.TopNavbar__Container}>
         <div className={classes.TopNavbarContent}>
           <div className={classes.LeftWrap}>
             <img
@@ -41,24 +45,34 @@ const TopNavbar = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className={classes.NavbarBottom__Container}>
+      </section>
+      <section className={classes.NavbarBottom__Container}>
         <div className={classes.NavbarBottomContent}>
           <div className={classes.LeftWrap}>
             <div className={classes.PanItemsImage}>
-              
-            </div>
-            <img
+              <img
                 src="https://resources.dunzo.com/web-assets/prod/_next/static/images/paan-3514c1ca4be5af789addd127f4c24308.png"
                 alt="PanItemsImage"
+                className={classes.Icon}
                 width="32"
                 height="32"
               />
+            </div>
+            <p className={classes.HeaderMessage}>
+              Order Paan items, munchies and much more on our new Dunzo Mo app
+            </p>
           </div>
-          <div className={classes.RightWrap}></div>
+          <div className={classes.RightWrap}>
+            <button className={classes.DownloadAppButton}>
+              <span>Download Dunzo Mo app now</span>
+              <span>
+                <MdKeyboardArrowRight fontSize='1.125rem'/>
+              </span>
+            </button>
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </>
   );
 };
 
