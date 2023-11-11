@@ -1,0 +1,64 @@
+.LayoutFooter {
+  width: 100%;
+  max-width: 100vw;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 12px;
+  background-color: rgb(23, 30, 48);
+  .LayoutContent {
+    max-width: 1024px;
+    width: 100%;
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    color: var(--white);
+    .FooterDesc__Wrap {
+      .Title {
+        font-weight: 700;
+        color: rgb(255, 255, 255);
+        margin-bottom: 0.7rem;
+      }
+      .Description {
+        font-weight: 500;
+        line-height: 24px;
+        color: rgb(183, 186, 195);
+      }
+    }
+    .Divider {
+      width: 100%;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      margin: 4rem 0;
+    }
+    .MoreSection {
+      display: flex;
+      justify-content: space-between;
+      .LeftWrap {
+        display: flex;
+        justify-content: space-between;
+        gap: 4rem;
+        .ListHeader {
+          font-weight: 700;
+          font-size: 1rem;
+          color: white;
+          letter-spacing: 0.2px;
+          text-transform: uppercase;
+          margin-bottom: 1rem;
+        }
+        .List {
+          .ListItem {
+            width: fit-content;
+            font-weight: 500;
+            font-size: 14px;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            margin-bottom: 1rem;
+            &:hover{
+                text-decoration: underline;
+            }
+          }
+        }
+      }
+      .RightWrap {
+      }
+    }
+  }
+}

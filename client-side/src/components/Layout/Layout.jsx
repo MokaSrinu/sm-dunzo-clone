@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './Layout.module.scss';
-import { TopNavbar } from '../molecules';
+import { LayoutFooter, TopNavbar } from '../molecules';
 
 const Layout = (props) => {
     const { children } = props;
@@ -8,6 +8,7 @@ const Layout = (props) => {
     <div className={classes.Layout__Container}>
         <TopNavbar />
         {children}
+        <LayoutFooter />
     </div>
   )
 };

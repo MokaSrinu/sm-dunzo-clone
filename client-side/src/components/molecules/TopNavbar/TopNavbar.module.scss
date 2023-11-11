@@ -1,13 +1,12 @@
 .TopNavbar__Container {
-  //height: 72px;
   position: sticky;
   left: 0px;
+  top: 0px;
   width: 100%;
   max-width: 100vw;
   box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 12px;
   background-color: rgb(255, 255, 255);
-  top: 0px;
-  //z-index: 11;
+  z-index: 9999;
   .TopNavbarContent {
     max-width: 1024px;
     width: 100%;
@@ -58,7 +57,7 @@
           font-size: 1.2rem;
         }
         &:hover {
-          color: rgb(0, 210, 144);;
+          color: rgb(0, 210, 144);
         }
       }
     }
@@ -86,7 +85,7 @@
           }
         }
       }
-      .CartIcon{
+      .CartIcon {
         font-weight: 600;
         font-size: 12px;
         line-height: 16px;
@@ -125,31 +124,53 @@
     }
   }
 }
-.NavbarBottom__Container{
+.NavbarBottom__Container {
   width: 100%;
   height: 44px;
-  background: linear-gradient(90.05deg, rgb(9, 17, 37) -2.5%, rgb(33, 61, 133) 100.83%);
-  .NavbarBottomContent{
+  background: linear-gradient(
+    90.05deg,
+    rgb(9, 17, 37) -2.5%,
+    rgb(33, 61, 133) 100.83%
+  );
+  .NavbarBottomContent {
     max-width: 1024px;
     width: 100%;
-    height:100%;
+    height: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .LeftWrap{
+    .LeftWrap {
       display: flex;
       justify-content: center;
       align-items: center;
-      .PanItemsImage{
-        width:1.5rem;
-        height:1.5rem;
+      gap: 1rem;
+      .PanItemsImage {
+        position: relative;
+        width: 1.5rem;
+        height: 1.5rem;
         border-radius: 50%;
-        padding:0px;
+        padding: 0px;
         background-color: rgba(255, 255, 255, 0.24);
+        .Icon {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
       }
-      img{
-        position: absolute;
+      .HeaderMessage{
+        color: var(--white);
+      }
+    }
+    .RightWrap{
+      .DownloadAppButton{
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        color: rgb(0, 179, 122);
       }
     }
   }
