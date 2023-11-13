@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import classes from "./LayoutFooter.module.scss";
+import { Link } from "react-router-dom";
 
 const LayoutFooter = (props) => {
   return (
@@ -47,13 +48,13 @@ const LayoutFooter = (props) => {
             <div>
               <h4 className={classes.ListHeader}>SERVICEABLE CITIES</h4>
               <ul className={classes.List}>
-                <li className={classes.ListItem}>Bangalore</li>
-                <li className={classes.ListItem}>Pune</li>
-                <li className={classes.ListItem}>Gurgaon</li>
-                <li className={classes.ListItem}>Hyderabad</li>
-                <li className={classes.ListItem}>Delhi</li>
-                <li className={classes.ListItem}>Chennai</li>
-                <li className={classes.ListItem}>Mumbai</li>
+                <li className={classes.ListItem}><Link to='bangalore' className={classes.ListItem}>Bangalore</Link></li>
+                <li className={classes.ListItem}><Link to='pune' className={classes.ListItem}>Pune</Link></li>
+                <li className={classes.ListItem}><Link to='gurgaon' className={classes.ListItem}>Gurgaon</Link></li>
+                <li className={classes.ListItem}><Link to='hyderabad' className={classes.ListItem}>Hyderabad</Link></li>
+                <li className={classes.ListItem}><Link to='delhi' className={classes.ListItem}>Delhi</Link></li>
+                <li className={classes.ListItem}><Link to='chennai' className={classes.ListItem}>Chennai</Link></li>
+                <li className={classes.ListItem}><Link to='mumbai' className={classes.ListItem}>Mumbai</Link></li>
               </ul>
             </div>
             <div>

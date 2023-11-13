@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { TopPickIcon } from "../../atoms/Icons/Icons.jsx";
 import classes from "./PageFooter.module.scss";
-import { TopPickIcon } from "../../atoms/Icons/Icons";
 
 const PageFooter = (props) => {
   const { areasWeDeliver } = props;
@@ -50,7 +50,7 @@ const PageFooter = (props) => {
               <img
                 className={classes.Image}
                 src="https://resources.dunzo.com/web-assets/prod/_next/static/images/dunzo-daily-app-preview-7c97560e963bcd173c11c470b2ff63ed.png"
-                alt=""
+                alt="dunzo-daily-app-preview"
               />
             </div>
             <div className={classes.DownloadInfo}>
@@ -63,11 +63,11 @@ const PageFooter = (props) => {
               <div className={classes.DownloadLinks}>
                 <img
                   src="https://resources.dunzo.com/web-assets/prod/_next/static/images/playstore-ee5b43e66d1583a6066423fb42fb69d8.svg"
-                  alt=""
+                  alt="playstore"
                 />
                 <img
                   src="https://resources.dunzo.com/web-assets/prod/_next/static/images/appstore-078da620a293bb95473ae21624a55872.svg"
-                  alt=""
+                  alt="appstore"
                 />
               </div>
             </div>
@@ -83,6 +83,10 @@ const PageFooter = (props) => {
                 {location}
               </div>
             ))}
+            {
+              !areasWeDeliver && 
+              <>Oops! Something Went Wrong...</>
+            }
           </div>
         </div>
       </section>

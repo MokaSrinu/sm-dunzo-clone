@@ -24,7 +24,7 @@
       .LocationWrap {
         display: flex;
         gap: 0.2rem;
-        font-size: 14px;
+        font-size: 0.875rem;
         font-weight: 600;
         justify-content: center;
         align-items: center;
@@ -50,8 +50,8 @@
         gap: 0.2rem;
         color: var(--neutral-primary);
         font-weight: 600;
-        font-size: 14px;
-        line-height: 16px;
+        font-size: 0.875rem;
+        line-height: 1rem;
         letter-spacing: 0.2px;
         svg {
           font-size: 1.2rem;
@@ -68,14 +68,14 @@
       justify-content: center;
       .SearchIcon {
         font-weight: 600;
-        font-size: 12px;
-        line-height: 16px;
+        font-size: 0.75rem;
+        line-height: 1rem;
         text-align: center;
         svg {
           margin: 0 auto;
           font-weight: none;
-          height: 24px;
-          width: 28px;
+          height: 1.5rem;
+          width: 1.75rem;
         }
         &:hover {
           color: rgb(0, 179, 122);
@@ -87,14 +87,14 @@
       }
       .CartIcon {
         font-weight: 600;
-        font-size: 12px;
-        line-height: 16px;
+        font-size: 0.75rem;
+        line-height: 1rem;
         text-align: center;
         svg {
           margin: 0 auto;
           font-weight: none;
-          height: 24px;
-          width: 28px;
+          height: 1.5rem;
+          width: 1.75rem;
         }
         &:hover {
           color: rgb(0, 179, 122);
@@ -107,16 +107,16 @@
       .SignInButtonWrap {
         font-style: normal;
         font-weight: 600;
-        font-size: 12px;
-        line-height: 16px;
+        font-size: 0.75rem;
+        line-height: 1rem;
         text-align: center;
         .SignInButton {
           cursor: pointer;
-          font-size: 14px;
+          font-size: 0.875rem;
           color: rgb(255, 255, 255);
           background: rgb(0, 210, 144);
-          padding: 8px 20px;
-          border-radius: 30px;
+          padding: 0.5rem 1.25rem;
+          border-radius: 1.875rem;
           font-weight: bold;
           border: none;
         }
