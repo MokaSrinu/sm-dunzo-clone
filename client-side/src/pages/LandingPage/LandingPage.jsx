@@ -1,23 +1,30 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useLocation, useParams } from "react-router-dom";
+import { MdArrowForward } from "react-icons/md";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { PageFooter } from "../../components/molecules";
 import {
   getLandingPageDetails,
   getLandingPageDetailsSelector,
 } from "../../redux-toolkit/slices/landing-page";
 import classes from "./LandingPage.module.scss";
-import { MdArrowForward } from "react-icons/md";
 
 const LandingPage = () => {
   const { city } = useParams();
   const location = useLocation();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const {
     data: getLandingPageDetailsData,
     loading: getLandingPageDetailsLoading,
     error: getLandingPageDetailsError,
   } = useSelector(getLandingPageDetailsSelector);
+
+  const handleCardActions = (category) => {
+    if(category && city) {
+      navigate(`/${city}/${category}`);
+    }
+  };
 
   const synchronizeComponentData = async () => {
     try {
@@ -33,7 +40,7 @@ const LandingPage = () => {
     synchronizeComponentData();
     window.scrollTo(0,0);
   }, [location]);
-  console.log(location)
+
   return (
     <div className={classes.LandingPage}>
       <div className={classes.LandingPageContent}>
@@ -56,7 +63,7 @@ const LandingPage = () => {
         </p>
         <div className={classes.ImageContainer}>
           {getLandingPageDetailsData?.data?.color_cards?.map((colorCard) => (
-            <div className={classes.ImageWrapper} key={colorCard?._id}>
+            <div className={classes.ImageWrapper} key={colorCard?._id} onClick={() => handleCardActions(colorCard?.category)}>
               <img
                 className={classes.Image}
                 src={colorCard?.image}
@@ -73,7 +80,7 @@ const LandingPage = () => {
         </div>
         <div className={classes.PlainCardContainer}>
           {getLandingPageDetailsData?.data?.plain_cards?.map((plainCard) => (
-            <div className={classes.ImageWrapper} key={plainCard?._id}>
+            <div className={classes.ImageWrapper} key={plainCard?._id} onClick={() => handleCardActions(plainCard?.category)}>
               <img
                 className={classes.Image}
                 src={plainCard?.image}

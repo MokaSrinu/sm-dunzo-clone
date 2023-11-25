@@ -1,0 +1,60 @@
+.ShopByCategory {
+  width: 100%;
+  max-width: 100vw;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 12px;
+  background-color: rgb(247, 253, 250);
+  .ShopByCategoryContent {
+    max-width: 1024px;
+    width: 100%;
+    padding: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    .PageHeader {
+      padding: 1rem 0;
+      .BreadCrumbs {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        font-size: 12px;
+        font-weight: 600;
+        .ActiveSection {
+          color: rgb(0, 179, 122);
+        }
+        .ArrowIcon {
+          fill: rgb(201, 205, 216);
+          color: rgb(201, 205, 216);
+        }
+        .City {
+          opacity: 0.45 !important;
+          color: rgb(23, 30, 48) !important;
+        }
+      }
+      .ShopCategoryWrapper {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        margin: 2rem 0 1rem 0;
+        .ImageWrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: rgba(0, 210, 144, 0.08);
+          border-radius: 16px;
+          height: 88px;
+          width: 88px;
+        }
+        .CategoryWrapper {
+          display: flex;
+          flex-direction: column;
+          .StoreCount {
+            color: rgb(0, 0, 0);
+            font-weight: 600;
+            font-size: 18px;
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
+}
