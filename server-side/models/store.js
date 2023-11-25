@@ -6,7 +6,13 @@ const StoreSchema = mongoose.Schema(
        store_landmark: String,
        store_distance: String,
        store_banner_image: String,
-       category: String,
+       store_owner: String,
+       store_location: String,
+       license_no: String,
+       category: {
+        label: String,
+        value: String,
+       },
        city: String,
        offers:[{
         image: String,
