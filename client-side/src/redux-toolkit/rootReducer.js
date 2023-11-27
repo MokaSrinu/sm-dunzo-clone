@@ -1,6 +1,7 @@
 import { combineReducers } from "@reduxjs/toolkit";
-import { landingPageReducers } from "./reducers";
+import { landingPageReducers, storeDetailsReducers } from "./reducers";
 
 export const rootReducer = combineReducers({
     ...landingPageReducers,
+    ...storeDetailsReducers,
 });
