@@ -5,6 +5,14 @@ const landingPageRoutes = {
     }
 };
 
+const storeRoutes = {
+    STORES_BY_CATEGORY_FETCH: {
+        URL: '/api/store/get-by-category',
+        METHOD: 'GET',
+    },
+};
+
 export const routes = {
     ...landingPageRoutes,
+    ...storeRoutes,
 };
